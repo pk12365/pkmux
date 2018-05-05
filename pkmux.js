@@ -65,6 +65,8 @@ bot.on("message", async(message) => {
     }
     const command = comarg.shift().toLowerCase();
 
+    const serverQueue = songQueue.get(message.guild.id);
+
 
     if (command === "play" || command === "p" || command === "yt") {
         const youtube = new YouTube(process.env.GOOGLEAPIKEY);
